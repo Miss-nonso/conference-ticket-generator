@@ -523,7 +523,7 @@ TICKET */
 }
 
 .event-location-wrapper span {
-  display: inline-block;
+  /* display: inline-block; */
   padding-top: 0.5rem;
   font-size: 10px;
 }
