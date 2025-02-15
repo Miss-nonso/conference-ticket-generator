@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { getFromStorage } from "../utils/storage";
+import { useEffect, useRef, useState } from "react";
+import { getFromStorage, saveToStorage } from "../utils/storage";
 
 import TicketSelection from "./TicketSelection";
 import AttendeeDetails from "./AttendeeDetails";
@@ -11,11 +11,15 @@ const TicketRender = () => {
     amount: 0
   });
 
+  useEffect(() => {
+    saveToStorage("currentStep", moveToStep);
+  });
+
   const ticketRef = useRef();
 
   const savedData = getFromStorage("ticketData");
 
-  const [moveToStep, setMoveToStep] = useState(1);
+  const [moveToStep, setMoveToStep] = useState(getFromStorage("currentStep"));
 
   return (
     <div className="render-container">
