@@ -16,7 +16,7 @@ const TicketRender = () => {
   const savedData = getFromStorage("ticketData");
 
   const [moveToStep, setMoveToStep] = useState(1);
-  console.log({ moveToStep });
+
   return (
     <div className="render-container">
       {moveToStep === 1 && (

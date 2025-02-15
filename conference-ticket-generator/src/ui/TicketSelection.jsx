@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import numbers from "../assets/options";
 import Button from "../components/Button";
@@ -33,6 +33,8 @@ const TicketSelection = ({
     }
   };
 
+  const [isClicked, setIsClicked] = useState(null);
+
   return (
     <div className="main-content">
       <ToastContainer />
@@ -60,13 +62,17 @@ const TicketSelection = ({
             <p>Select Ticket Type:</p>
 
             <div className="tickets-list">
-              {ticketTypes.map(({ type, noOfTicketsLeft, price }) => (
+              {ticketTypes.map(({ type, noOfTicketsLeft, price }, index) => (
                 <button
                   key={type}
-                  className="ticket-item"
-                  onClick={() =>
-                    setTicketSelection({ ...ticketSelection, type })
-                  }
+                  className={`ticket-item`}
+                  onClick={() => {
+                    setTicketSelection({ ...ticketSelection, type });
+                    setIsClicked(index);
+                  }}
+                  style={{
+                    background: index == isClicked && "var(--linegreen)"
+                  }}
                 >
                   <h6 className="ticket-price">{price}</h6>
                   <p>{type}</p>

@@ -7,7 +7,6 @@ import { handleDownload } from "../utils/downloadTicket";
 
 // eslint-disable-next-line react/prop-types
 const Ticket = ({ data, setMoveToStep, ticketRef }) => {
-  console.log({ download: handleDownload() });
   return (
     <div className="ticket-body">
       {" "}

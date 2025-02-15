@@ -64,15 +64,13 @@ const Form = ({ setMoveToStep, moveToStep }) => {
     );
 
     let uploadImageURL = await res.json();
-    console.log({ uploading: uploadImageURL.url });
+
     setImagePreview(uploadImageURL.url);
     !uploadImageURL && toast("Please try again");
     uploadImageURL = "";
   };
 
   const submitHandler = (data) => {
-    console.log({ data });
-
     if (!data.img) {
       toast("Please upload image");
     }
