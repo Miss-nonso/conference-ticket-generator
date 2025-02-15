@@ -365,8 +365,10 @@ textarea:focus-within {
 
 .img-upload-overlay {
   border: 3px solid var(--brightgreen);
-  display: grid;
-  place-content: center;
+  /* display: grid;
+  place-content: center; */
+  display: block;
+
   text-align: center;
   gap: 0.5rem;
   border-radius: 2rem;
@@ -378,6 +380,7 @@ textarea:focus-within {
 
 .img-upload-overlay svg {
   margin-inline: auto;
+  margin-top: 40%;
 }
 
 .img-uploader img {
