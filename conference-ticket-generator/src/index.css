@@ -352,6 +352,7 @@ textarea:focus-within {
 .img-uploader {
   position: relative;
   width: 45%;
+  aspect-ratio: 1;
   margin-inline: auto;
   margin-block: 1rem;
   cursor: pointer;
@@ -365,12 +366,13 @@ textarea:focus-within {
   border: 3px solid var(--brightgreen);
   display: grid;
   place-content: center;
+  text-align: center;
   gap: 0.5rem;
   border-radius: 2rem;
   background-color: var(--green);
-  position: relative;
   height: 100%;
   aspect-ratio: 1;
+  padding: 0.5rem;
 }
 
 .img-upload-overlay svg {
@@ -389,6 +391,7 @@ textarea:focus-within {
 
 .img-uploader:hover .img-upload-overlay {
   z-index: 2;
+  position: relative;
   opacity: 0.7;
 }
 
@@ -694,7 +697,7 @@ TICKET */
   }
 
   .img-uploader {
-    width: 90%;
+    width: 80%;
     display: grid;
     place-content: center;
   }
@@ -703,11 +706,23 @@ TICKET */
     width: 100%;
   }
 
+  /* .img-upload-overlay {
+    border: 3px solid var(--brightgreen);
+    display: grid;
+    place-content: center;
+    gap: 0.5rem;
+    border-radius: 2rem;
+    background-color: var(--green);
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1;
+  } */
+
   .img-uploader img {
     width: 100%;
-    height: 99%;
     aspect-ratio: 1;
     margin-left: 0rem;
+
     object-fit: cover;
   }
 
@@ -718,8 +733,7 @@ TICKET */
   }
 
   .img-uploader:hover img {
-    margin-top: 0.7rem;
-    height: 90%;
+    height: 100%;
     width: 100%;
   }
 
