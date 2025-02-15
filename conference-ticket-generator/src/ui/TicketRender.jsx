@@ -19,7 +19,9 @@ const TicketRender = () => {
 
   const savedData = getFromStorage("ticketData");
 
-  const [moveToStep, setMoveToStep] = useState(getFromStorage("currentStep"));
+  const [moveToStep, setMoveToStep] = useState(
+    getFromStorage("currentStep") || 1
+  );
 
   return (
     <div className="render-container">
