@@ -18,7 +18,7 @@ const TicketDetails = ({ data }) => {
         <div className="ticket-details-part">
           <div className="ticket-detail-item">
             <p>Enter your name</p>
-            <h6>dyd</h6>
+            <h6>{data.fullName}</h6>
           </div>
           <div className="ticket-detail-item">
             <p>Enter your email *</p>

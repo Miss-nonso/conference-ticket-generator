@@ -71,6 +71,7 @@ const Form = ({ setMoveToStep, moveToStep }) => {
   };
 
   const submitHandler = (data) => {
+    console.log({ data });
     if (!data.img) {
       toast("Please upload image");
     }
