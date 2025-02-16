@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { getFromStorage, saveToStorage } from "../utils/storage";
-
 import TicketSelection from "./TicketSelection";
 import AttendeeDetails from "./AttendeeDetails";
 import Ticket from "./Ticket";

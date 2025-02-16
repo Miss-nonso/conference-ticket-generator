@@ -352,7 +352,7 @@ textarea:focus-within {
 
 .img-uploader {
   position: relative;
-  width: 45%;
+  width: 55%;
   aspect-ratio: 1;
   margin-inline: auto;
   margin-block: 1rem;
@@ -365,10 +365,8 @@ textarea:focus-within {
 
 .img-upload-overlay {
   border: 3px solid var(--brightgreen);
-  /* display: grid;
-  place-content: center; */
-  display: block;
-
+  display: grid;
+  place-content: center;
   text-align: center;
   gap: 0.5rem;
   border-radius: 2rem;
@@ -380,7 +378,7 @@ textarea:focus-within {
 
 .img-upload-overlay svg {
   margin-inline: auto;
-  margin-top: 40%;
+  /* margin-top: 40%; */
 }
 
 .img-uploader img {
@@ -621,6 +619,23 @@ TICKET */
     flex-direction: column-reverse;
     gap: 0.5rem;
   }
+
+  .img-uploader:hover .img-upload-overlay {
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* .img-uploader {
+    width: 60%;
+    display: grid;
+    place-content: center;
+  } */
+
+  /* .img-upload-overlay {
+    height: 100%;
+    aspect-ratio: 1;
+    display: block;
+  } */
 }
 
 @media (max-width: 480px) {
@@ -701,7 +716,7 @@ TICKET */
   }
 
   .img-uploader {
-    width: 80%;
+    width: 70%;
     display: grid;
     place-content: center;
   }
@@ -710,23 +725,15 @@ TICKET */
     width: 100%;
   }
 
-  /* .img-upload-overlay {
-    border: 3px solid var(--brightgreen);
-    display: grid;
-    place-content: center;
-    gap: 0.5rem;
-    border-radius: 2rem;
-    background-color: var(--green);
-    position: relative;
+  .img-upload-overlay {
     height: 100%;
     aspect-ratio: 1;
-  } */
+    display: block;
+  }
 
   .img-uploader img {
     width: 100%;
     aspect-ratio: 1;
-    margin-left: 0rem;
-
     object-fit: cover;
   }
 
